@@ -18,4 +18,4 @@ A live preview of the "About Me" page will appear as soon as you start entering 
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/about-me-page-designer.git
+   git clone https://github.com/happylabdab2/about-me-page-designer.git
