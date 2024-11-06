@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me Designer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1> About Me Page Designer</h1>
+        <p>Fill out the form below to create an "About Me" page with animation effects.</p>
+
+        <div class="form-section">
+            <h2>Enter Your Information</h2>
+            <form id="aboutForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Your Name">
+
+                <label for="bio">Short Bio:</label>
+                <textarea id="bio" rows="3"
+                    placeholder="A brief summary of your journey, key accomplishments..."></textarea>
+
+                <label for="valueProposition">Unique Value Proposition:</label>
+                <textarea id="valueProposition" rows="2"
+                    placeholder="What sets you apart and why someone should work with you"></textarea>
+
+                <label for="skills">Relevant Skills and Experience:</label>
+                <textarea id="skills" rows="2"
+                    placeholder="e.g., Project Management, Data Analysis, UX Design"></textarea>
+
+                <label for="story">Personal Story or Anecdote:</label>
+                <textarea id="story" rows="4"
+                    placeholder="Share a story or personal experience that shaped your career"></textarea>
+
+                <label for="cta">Call to Action:</label>
+                <input type="text" id="cta" placeholder="e.g., Contact me for a consultation">
+
+                <label for="contactLink">Contact Link URL:</label>
+                <input type="text" id="contactLink" placeholder="e.g., https://yourwebsite.com/contact">
+
+                <label for="profilePic">Profile Picture URL:</label>
+                <input type="text" id="profilePic" placeholder="Link to your profile picture">
+
+                <label for="socialLinks">Social Media Links (comma-separated URLs):</label>
+                <input type="text" id="socialLinks"
+                    placeholder="e.g., https://linkedin.com/in/username, https://twitter.com/username">
+
+                <button type="button" class="button" onclick="updatePreview()">Generate Preview</button>
+            </form>
+        </div>
+
+        <div class="preview-section" id="preview">
+            <h2>Preview</h2>
+            <div id="downloadsec">
+                <!--hack to get around the system-->
+                <script
+                    src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+                <img src="https://via.placeholder.com/120" id="previewPic" alt="Profile Picture" class="section">
+                <h3 id="previewName" class="section">Your Name</h3>
+                <p id="previewBio" class="section">Your bio will appear here.</p>
+
+                <div class="section" id="previewValueProp">
+                    <h4>What I Bring to the Table</h4>
+                    <p id="previewValueProposition">Your unique value proposition will appear here.</p>
+                </div>
+
+                <div class="section" id="previewSkillsExp">
+                    <h4>Skills and Experience</h4>
+                    <p id="previewSkills">Your skills and experience will appear here.</p>
+                </div>
+
+                <div class="section" id="previewStorySection">
+                    <h4>My Story</h4>
+                    <p id="previewStory">Your personal story or anecdote will appear here.</p>
+                </div>
+
+                <div class="section" id="previewCTA">
+                    <button class="button" onclick="triggerConfetti()">Contact Me</button>
+                </div>
+
+                <div class="social-links section" id="previewSocialLinks">
+                    <!-- Social media links will appear here -->
+                </div>
+            </div>
+        </div>
+        <button class="button" onclick="downloadHTML()">Download Profile</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+    <script defer src="script.js">
+    </script>
+</body>
+
+</html>
